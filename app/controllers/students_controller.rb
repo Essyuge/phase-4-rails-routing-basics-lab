@@ -4,8 +4,8 @@ class StudentsController < ApplicationController
         render json: students
     end
     def grades
-        s =  Student.order("grade").reverse
-        render json: s
+       
+        render json: Student.order("grade").reverse
     end
     def highest_grade
         render json: Student.order("grade").reverse.first
